@@ -9,7 +9,8 @@ defmodule Examen.Libro do
 
   def changeset(libro, params \\ %{}) do
     libro
-    |> cast(params, [:nombre, :autor])
-    |> validate_required([:nombre, :autor])
+    |> cast(params, [:nombre, :autor_id])
+    |> validate_required([:nombre, :autor_id])
+    |> assoc_constraint(:autor)
   end
 end

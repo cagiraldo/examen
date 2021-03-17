@@ -3,6 +3,7 @@ defmodule Examen.Autor do
   import Ecto.Changeset
   schema "autor" do
     field :nombre, :string
+    has_many :libros, Examen.Libro
   end
 
   def changeset(autor, params \\ %{}) do

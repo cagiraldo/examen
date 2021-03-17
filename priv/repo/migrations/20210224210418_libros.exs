@@ -4,7 +4,7 @@ defmodule Examen.Repo.Migrations.Libros do
   def change do
     create table(:libros) do
       add :nombre, :string, null: false
-      add :autor_id, references(:autor)
+      add :autor_id, references(:autor, on_delete: :delete_all)
     end
     create unique_index(:libros, [:autor_id])
   end

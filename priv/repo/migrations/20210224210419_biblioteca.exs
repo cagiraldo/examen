@@ -3,7 +3,7 @@ defmodule Examen.Repo.Migrations.Biblioteca do
   def change do
     create table(:biblioteca) do
       add :nombre, :string, null: false
-      add :libro_id, references(:libros)
+      add :libro_id, references(:libros, on_delete: :delete_all)
     end
     create unique_index(:biblioteca, [:libro_id])
   end

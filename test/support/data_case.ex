@@ -19,7 +19,7 @@ defmodule Examen.DataCase do
   using do
     quote do
       alias Examen.Repo
-
+      import Examen.Factory
       import Ecto
       import Ecto.Changeset
       import Ecto.Query

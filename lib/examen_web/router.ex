@@ -15,7 +15,7 @@ defmodule ExamenWeb.Router do
 
   scope "/", ExamenWeb do
     pipe_through :browser
-
+    
     get "/", PageController, :index
   end
 

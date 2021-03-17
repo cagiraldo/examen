@@ -1,5 +1,5 @@
 defmodule Examen.Factory do
-  use ExMachine.Ecto, repo: Examen.Repo
+  use ExMachina.Ecto, repo: Examen.Repo
   alias Examen.Biblioteca
   alias Examen.Libro
   alias Examen.Autor
@@ -19,7 +19,7 @@ defmodule Examen.Factory do
 
   def libro_factory do
     %Libro{
-      nombre: "cien años de soledad",
+      nombre: "cuentos peregrinos",
       autor: build(:autor)
     }
   end
